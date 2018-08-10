@@ -93,7 +93,7 @@ $(document).ready(function() {
     if (ruby === react || cSharp === react || ruby === react) { //tiebreaker
 
     }
-    else if (ruby > cSharp $$ ruby > react) { //ruby wins
+    else if (ruby > cSharp && ruby > react) { //ruby wins
 
     }
     else if (react >cSharp && react > ruby) { //react wins
