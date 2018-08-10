@@ -1,0 +1,8 @@
+.form-group {
+  height: 170px;
+  /* display: flex; */
+  /* align-items: flex-start; */
+}
+.btn-block {
+  margin-top: 5%;
+}
