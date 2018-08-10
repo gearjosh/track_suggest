@@ -1,6 +1,8 @@
 $(document).ready(function() {
   $("button#big-button").click(function(event) {
     event.preventDefault();
+    $(".winner-block").hide();
+    $(".tiebreaker-block").hide();
 //backend logic begins
 //variable definition
     var ruby = 0
@@ -78,31 +80,31 @@ $(document).ready(function() {
 //result return
     if (ruby === react) { //tiebreaker
       $(".tiebreaker-block").show();
-      $("select#qTiebreak").children("option[value='cSharp']").remove();
+      $("select#qTiebreak").children("option#tCSharp").remove();
       $("button#tie-button").click(function(event) {
         event.preventDefault();
         var question7 = $("#qTiebreak").val();
         if (question7 === "Slow Runtime Speed") { //ruby
-          cSharp += 0.5;
+          ruby += 0.5;
         } else { //react
           react += 0.5;
         }
       });
     } if (cSharp === react) {
       $(".tiebreaker-block").show();
-      $("select#qTiebreak").children("option[value='ruby']").remove();
+      $("select#qTiebreak").children("option#tRuby").remove();
       $("button#tie-button").click(function(event) {
         event.preventDefault();
         var question7 = $("#qTiebreak").val();
         if (question7 === "Hard to Learn") { //cSharp
-          ruby += 0.5;
+          cSharp += 0.5;
         } else { //react
           react += 0.5;
         }
       });
     } if (ruby === cSharp) {
       $(".tiebreaker-block").show();
-      $("select#qTiebreak").children("option[value='react']").remove();
+      $("select#qTiebreak").children("option#tReact").remove();
       $("button#tie-button").click(function(event) {
         event.preventDefault();
         var question7 = $("#qTiebreak").val();
