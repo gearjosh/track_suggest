@@ -80,17 +80,7 @@ $(document).ready(function() {
       $(".tiebreaker-block").show();
       $("button#tie-button").click(function(event) {
         event.preventDefault();
-        var question7 = $("#qTiebreak").val();
-        if (question7 === "Slow Runtime Speed") { //ruby
-          ruby += 0.5;
-        } else { //react
-          react += 0.5;
-        }
-      });
-    } if else (cSharp === react) {
-      $(".tiebreaker-block").show();
-      $("button#tie-button").click(function(event) {
-        event.preventDefault();
+        $("#qTiebreak option[value='1']").remove();
         var question7 = $("#qTiebreak").val();
         if (question7 === "Hard to Learn") { //cSharp
           cSharp += 0.5;
@@ -98,10 +88,11 @@ $(document).ready(function() {
           react += 0.5;
         }
       });
-    } if else (ruby === cSharp) {
+    } if (cSharp === react) {
       $(".tiebreaker-block").show();
       $("button#tie-button").click(function(event) {
         event.preventDefault();
+        $("#qTiebreak option[value='2']").remove();
         var question7 = $("#qTiebreak").val();
         if (question7 === "Slow Runtime Speed") { //ruby
           ruby += 0.5;
@@ -109,33 +100,64 @@ $(document).ready(function() {
           react += 0.5;
         }
       });
-    }
-
-    if ($(".tiebreaker-block").attr(display) != "none") {
+    } if (ruby === cSharp) {
+      $(".tiebreaker-block").show();
       $("button#tie-button").click(function(event) {
         event.preventDefault();
+        $("#qTiebreak option[value='3']").remove();
+        var question7 = $("#qTiebreak").val();
+        if (question7 === "Slow Runtime Speed") { //ruby
+          ruby += 0.5;
+        } else { //cSharp
+          cSharp += 0.5;
+        }
       });
     }
 
-    if (ruby > cSharp && ruby > react) { //ruby wins
-      $("#winner-pic").attr("src", "img/ruby.png");
-      $("#winner-link").attr("href", "https://www.ruby-lang.org/en/")
-      $("#winner-name").html("Ruby");
-      $("#winner-button").html("Ruby");
-      $(".winner-block").show();
-    } else if (react >cSharp && react > ruby) { //react wins
-      $("#winner-pic").attr("src", "img/react.png");
-      $("#winner-link").attr("href", "https://reactjs.org/")
-      $("#winner-name").html("React");
-      $("#winner-button").html("React");
-      $(".winner-block").show();
-    } else { //cSharp wins
-      $("#winner-pic").attr("src", "img/csharp.jpg");
-      $("#winner-link").attr("href", "https://docs.microsoft.com/en-us/dotnet/csharp/")
-      $("#winner-name").html("C#");
-      $("#winner-button").html("C#");
-      $(".winner-block").show();
-    }
+    if ($(".tiebreaker-block").is(':visible')) {
+      $("button#tie-button").click(function(event) {
+        event.preventDefault();
+        if (ruby > cSharp && ruby > react) { //ruby wins
+          $("#winner-pic").attr("src", "img/ruby.png");
+          $("#winner-link").attr("href", "https://www.ruby-lang.org/en/")
+          $("#winner-name").html("Ruby");
+          $("#winner-button").html("Ruby");
+          $(".winner-block").show();
+        } else if (react >cSharp && react > ruby) { //react wins
+          $("#winner-pic").attr("src", "img/react.png");
+          $("#winner-link").attr("href", "https://reactjs.org/")
+          $("#winner-name").html("React");
+          $("#winner-button").html("React");
+          $(".winner-block").show();
+        } else { //cSharp wins
+          $("#winner-pic").attr("src", "img/csharp.jpg");
+          $("#winner-link").attr("href", "https://docs.microsoft.com/en-us/dotnet/csharp/")
+          $("#winner-name").html("C#");
+          $("#winner-button").html("C#");
+          $(".winner-block").show();
+        }
+      });
+    } else {
 
+      if (ruby > cSharp && ruby > react) { //ruby wins
+        $("#winner-pic").attr("src", "img/ruby.png");
+        $("#winner-link").attr("href", "https://www.ruby-lang.org/en/")
+        $("#winner-name").html("Ruby");
+        $("#winner-button").html("Ruby");
+        $(".winner-block").show();
+      } else if (react >cSharp && react > ruby) { //react wins
+        $("#winner-pic").attr("src", "img/react.png");
+        $("#winner-link").attr("href", "https://reactjs.org/")
+        $("#winner-name").html("React");
+        $("#winner-button").html("React");
+        $(".winner-block").show();
+      } else { //cSharp wins
+        $("#winner-pic").attr("src", "img/csharp.jpg");
+        $("#winner-link").attr("href", "https://docs.microsoft.com/en-us/dotnet/csharp/")
+        $("#winner-name").html("C#");
+        $("#winner-button").html("C#");
+        $(".winner-block").show();
+      }
+    }
   });
 });
