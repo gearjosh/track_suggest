@@ -80,26 +80,27 @@
       </div> <!--row2 end-->
       <button type="button" class="btn btn-primary btn-lg btn-block"id="big-button">Tell me my ideal programming language!</button>
       <br>
-      <div class="tiebreaker">
+      <div class="tiebreaker-block">
         <h3>It looks like we have a tie!</h3>
         <h5>One more question then:</h5>
         <div class="form-group">
           <label for="qTiebreak">Which of the following would be <span class="notice-me">least</span> irritating to you?</label>
           <select class="form-control" id="qTiebreak">
-            <option>Slow runtime speed</option>
-            <option>Hard to learn</option>
-            <option>Constantly changing</option>
+            <option>Slow Runtime Speed</option>
+            <option>Hard to Learn</option>
+            <option>Constantly Changing</option>
           </select>
         </div>
         <button type="button" class="btn btn-primary "id="tie-button">Break my tie!</button>
       </div>
+      <br>
       <div class="winner-block">
         <div class="card">
-          <img class="card-img-top" src="#" alt="Card image cap">
+          <img class="card-img-top" id="winner-pic" src="#" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">We have a winner!</h5>
-            <p class="card-text">Congratulations!<br><span id="winner-name"></span>is the perfect programming language for you!<br><span id="winner-describe"></span></p>
-            <a href="#" class="btn btn-primary">I want to learn more about<span id="winner-button"></span></a>
+            <p class="card-text">Congratulations! <br><span id="winner-name"></span> is the perfect programming language for you!<br><span id="winner-describe"></span></p>
+            <a href="#" class="btn btn-primary" id="winner-link">I want to learn more about <span id="winner-button"></span></a>
           </div>
         </div>
       </div>

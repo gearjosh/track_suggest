@@ -90,8 +90,18 @@ $(document).ready(function() {
 
     console.log(ruby, react, cSharp)
 //result return
-    if (ruby === react || cSharp === react || ruby === react) { //tiebreaker
-
+    if (ruby === react || cSharp === react || ruby === cSharp) { //tiebreaker
+      $(".tiebreaker-block").show();
+      $("button#tie-button").click(function(event){
+        var question7 = $("#qTiebreak").val();
+        if (question7 === "Slow Runtime Speed") {
+          $("#winner-pic").attr("src", "img/ruby.png");
+          $("#winner-link").attr("href", "https://www.ruby-lang.org/en/")
+          $("#winner-name").html("Ruby");
+          $("#winner-button").html("Ruby");
+          $(".winner-block").show();
+        }
+      });
     }
     else if (ruby > cSharp && ruby > react) { //ruby wins
 

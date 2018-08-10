@@ -9,7 +9,16 @@
 
 .notice-me {
   font-weight: bolder;
+  /* text-shadow: .1em .1em .1em #000; */
   color: red;
+}
+
+.tiebreaker-block {
+  display: none;
+}
+
+.winner-block {
+  display: none;
 }
 
 label {
