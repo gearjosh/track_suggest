@@ -11,5 +11,16 @@ $(document).ready(function() {
     var question4 = $("#qHtmlJavascript").val();
     var question5 = $("#qUserBusiness").val();
     var question6 = $("#qWhichCompany").val();
+
+    if (question1 === "Big Company") {
+      cSharp ++
+    }
+    else if (question1 === "Small Company") {
+      ruby ++
+    }
+    else {
+      react ++
+    }
+    console.log(ruby, react, cSharp)
   });
 });
