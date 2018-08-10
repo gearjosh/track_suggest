@@ -78,11 +78,11 @@ $(document).ready(function() {
 //result return
     if (ruby === react) { //tiebreaker
       $(".tiebreaker-block").show();
+      $("select#qTiebreak").children("option[value='cSharp']").remove();
       $("button#tie-button").click(function(event) {
         event.preventDefault();
-        $("#qTiebreak option[value='1']").remove();
         var question7 = $("#qTiebreak").val();
-        if (question7 === "Hard to Learn") { //cSharp
+        if (question7 === "Slow Runtime Speed") { //ruby
           cSharp += 0.5;
         } else { //react
           react += 0.5;
@@ -90,11 +90,11 @@ $(document).ready(function() {
       });
     } if (cSharp === react) {
       $(".tiebreaker-block").show();
+      $("select#qTiebreak").children("option[value='ruby']").remove();
       $("button#tie-button").click(function(event) {
         event.preventDefault();
-        $("#qTiebreak option[value='2']").remove();
         var question7 = $("#qTiebreak").val();
-        if (question7 === "Slow Runtime Speed") { //ruby
+        if (question7 === "Hard to Learn") { //cSharp
           ruby += 0.5;
         } else { //react
           react += 0.5;
@@ -102,9 +102,9 @@ $(document).ready(function() {
       });
     } if (ruby === cSharp) {
       $(".tiebreaker-block").show();
+      $("select#qTiebreak").children("option[value='react']").remove();
       $("button#tie-button").click(function(event) {
         event.preventDefault();
-        $("#qTiebreak option[value='3']").remove();
         var question7 = $("#qTiebreak").val();
         if (question7 === "Slow Runtime Speed") { //ruby
           ruby += 0.5;
