@@ -3,6 +3,7 @@
   /* display: flex; */
   /* align-items: flex-start; */
 }
+
 .btn-block {
   margin-top: 5%;
 }
@@ -10,7 +11,7 @@
 .notice-me {
   font-weight: bolder;
   /* text-shadow: .1em .1em .1em #000; */
-  color: red;
+  color: #FCC37C;
 }
 
 .tiebreaker-block {
@@ -23,6 +24,45 @@
   align-items: center;
 }
 
+.container {
+  padding-top: 10px;
+}
+
 label {
   height: 100px;
+}
+
+body {
+  background-color: #01A58D;
+  color: #594A46;
+}
+
+.btn {
+  background-color: #F7715D;
+  color: #594A46;
+  border: #FCC37C;
+}
+
+.btn:hover {
+  background-color: #FCC37C;
+  color: #F7715D;
+  border: #E3DACD;
+}
+
+.btn:focus {
+  /* outline: none; */
+  box-shadow: none;
+}
+
+.form-control {
+  background-color: #F3F2F0;
+}
+
+.winner-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h3 {
+  text-shadow: 0px -1px #FCC37C;
 }
