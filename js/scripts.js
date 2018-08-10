@@ -15,102 +15,113 @@ $(document).ready(function() {
     var question6 = $("#qWhichCompany").val();
 //q1
     if (question1 === "Big Company") {
-      cSharp ++
+      cSharp ++;
     }
     else if (question1 === "Small Company") {
-      ruby ++
+      ruby ++;
     }
     else {
-      react ++
+      react ++;
     }
     console.log(ruby, react, cSharp)
 //q2
     if (question2 === "Frontend") {
-      react ++
+      react ++;
     }
     else {
-      ruby ++
-      cSharp ++
+      ruby ++;
+      cSharp ++;
     }
-    console.log(ruby, react, cSharp)
+    console.log(ruby, react, cSharp);
 //q3
     if (question3 === "Ease of Use") {
-      react ++
-      ruby ++
+      react ++;
+      ruby ++;
     }
     else {
-      cSharp ++
+      cSharp ++;
     }
-    console.log(ruby, react, cSharp)
+    console.log(ruby, react, cSharp);
 //q4
     if (question4 === "HTML") {
-      cSharp ++
-      ruby ++
+      cSharp ++;
+      ruby ++;
     }
     else {
-      react ++
+      react ++;
     }
-    console.log(ruby, react, cSharp)
+    console.log(ruby, react, cSharp);
 //q5
     if (question5 === "Inidividual Users") {
-      react ++
+      react ++;
     }
     else if (question5 === "Businesses") {
-      cSharp ++
+      cSharp ++;
     }
     else {
-      ruby ++
+      ruby ++;
     }
-    console.log(ruby, react, cSharp)
+    console.log(ruby, react, cSharp);
 // q6
     if (question6 === "Microsoft") {
-      cSharp ++
+      cSharp ++;
     }
     else if (question6 === "Netflix") {
-      react ++
+      react ++;
     }
     else if (question6 === "Airbnb") {
-      ruby ++
+      ruby ++;
     }
     else if (question6 === "Dropbox") {
-      react ++
+      react ++;
     }
     else if (question6 === "Blizzard") {
-      cSharp ++
+      cSharp ++;
     }
     else if (question6 === "Soundcloud") {
-      ruby ++
+      ruby ++;
     }
     else if (question6 === "Instagram") {
-      react ++
+      react ++;
     }
     else {
-      ruby ++
+      ruby ++;
     }
 
-    console.log(ruby, react, cSharp)
+    console.log(ruby, react, cSharp);
 //result return
     if (ruby === react || cSharp === react || ruby === cSharp) { //tiebreaker
       $(".tiebreaker-block").show();
       $("button#tie-button").click(function(event){
         var question7 = $("#qTiebreak").val();
-        if (question7 === "Slow Runtime Speed") {
-          $("#winner-pic").attr("src", "img/ruby.png");
-          $("#winner-link").attr("href", "https://www.ruby-lang.org/en/")
-          $("#winner-name").html("Ruby");
-          $("#winner-button").html("Ruby");
-          $(".winner-block").show();
+        if (question7 === "Slow Runtime Speed") { //ruby
+          ruby += 0.5;
+        } else if (question7 === "Hard to Learn") { //cSharp
+          cSharp += 0.5;
+        } else { //react
+          react += 0.5;
         }
       });
+    //and if?
     }
-    else if (ruby > cSharp && ruby > react) { //ruby wins
-
-    }
-    else if (react >cSharp && react > ruby) { //react wins
-
-    }
-    else { //cSharp wins
-
+    if (ruby > cSharp && ruby > react) { //ruby wins
+      $("#winner-pic").attr("src", "img/ruby.png");
+      $("#winner-link").attr("href", "https://www.ruby-lang.org/en/")
+      $("#winner-name").html("Ruby");
+      $("#winner-button").html("Ruby");
+      $(".winner-block").show();
+    } else if (react >cSharp && react > ruby) { //react wins
+      $("#winner-pic").attr("src", "img/react.png");
+      $("#winner-link").attr("href", "https://reactjs.org/")
+      $("#winner-name").html("React");
+      $("#winner-button").html("React");
+      $(".winner-block").show();
+    } else { //cSharp wins
+      $("#winner-pic").attr("src", "img/c#.jpg");
+      $("#winner-link").attr("href", "https://docs.microsoft.com/en-us/dotnet/csharp/")
+      $("#winner-name").html("C#");
+      $("#winner-button").html("C#");
+      $(".winner-block").show();
     }
 
   });
