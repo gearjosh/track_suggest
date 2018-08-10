@@ -123,18 +123,21 @@ $(document).ready(function() {
           $("#winner-name").html("Ruby");
           $("#winner-button").html("Ruby");
           $(".winner-block").show();
+          $(".tiebreaker-block").hide();
         } else if (react >cSharp && react > ruby) { //react wins
           $("#winner-pic").attr("src", "img/react.png");
           $("#winner-link").attr("href", "https://reactjs.org/")
           $("#winner-name").html("React");
           $("#winner-button").html("React");
           $(".winner-block").show();
+          $(".tiebreaker-block").hide();
         } else { //cSharp wins
           $("#winner-pic").attr("src", "img/csharp.jpg");
           $("#winner-link").attr("href", "https://docs.microsoft.com/en-us/dotnet/csharp/")
           $("#winner-name").html("C#");
           $("#winner-button").html("C#");
           $(".winner-block").show();
+          $(".tiebreaker-block").hide();
         }
       });
     } else {
