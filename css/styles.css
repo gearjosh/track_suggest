@@ -20,6 +20,7 @@
 .winner-block {
   display: none;
   width: 75%;
+  align-items: center;
 }
 
 label {

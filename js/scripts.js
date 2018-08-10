@@ -76,20 +76,47 @@ $(document).ready(function() {
     console.log("ruby", "react", "cSharp");
     console.log(ruby, react, cSharp);
 //result return
-    if (ruby === react || cSharp === react || ruby === cSharp) { //tiebreaker
+    if (ruby === react) { //tiebreaker
       $(".tiebreaker-block").show();
-      $("button#tie-button").click(function(event){
+      $("button#tie-button").click(function(event) {
+        event.preventDefault();
         var question7 = $("#qTiebreak").val();
         if (question7 === "Slow Runtime Speed") { //ruby
           ruby += 0.5;
-        } else if (question7 === "Hard to Learn") { //cSharp
+        } else { //react
+          react += 0.5;
+        }
+      });
+    } if else (cSharp === react) {
+      $(".tiebreaker-block").show();
+      $("button#tie-button").click(function(event) {
+        event.preventDefault();
+        var question7 = $("#qTiebreak").val();
+        if (question7 === "Hard to Learn") { //cSharp
           cSharp += 0.5;
         } else { //react
           react += 0.5;
         }
       });
-    //and if?
+    } if else (ruby === cSharp) {
+      $(".tiebreaker-block").show();
+      $("button#tie-button").click(function(event) {
+        event.preventDefault();
+        var question7 = $("#qTiebreak").val();
+        if (question7 === "Slow Runtime Speed") { //ruby
+          ruby += 0.5;
+        } else { //react
+          react += 0.5;
+        }
+      });
     }
+
+    if ($(".tiebreaker-block").attr(display) != "none") {
+      $("button#tie-button").click(function(event) {
+        event.preventDefault();
+      });
+    }
+
     if (ruby > cSharp && ruby > react) { //ruby wins
       $("#winner-pic").attr("src", "img/ruby.png");
       $("#winner-link").attr("href", "https://www.ruby-lang.org/en/")
