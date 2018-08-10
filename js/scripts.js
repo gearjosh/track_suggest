@@ -16,19 +16,16 @@ $(document).ready(function() {
 //q1
     if (question1 === "Big Company") {
       cSharp ++;
-    }
-    else if (question1 === "Small Company") {
+    } else if (question1 === "Small Company") {
       ruby ++;
-    }
-    else {
+    } else {
       react ++;
     }
     console.log(ruby, react, cSharp)
 //q2
     if (question2 === "Frontend") {
       react ++;
-    }
-    else {
+    } else {
       ruby ++;
       cSharp ++;
     }
@@ -37,8 +34,7 @@ $(document).ready(function() {
     if (question3 === "Ease of Use") {
       react ++;
       ruby ++;
-    }
-    else {
+    } else {
       cSharp ++;
     }
     console.log(ruby, react, cSharp);
@@ -46,48 +42,38 @@ $(document).ready(function() {
     if (question4 === "HTML") {
       cSharp ++;
       ruby ++;
-    }
-    else {
+    } else {
       react ++;
     }
     console.log(ruby, react, cSharp);
 //q5
-    if (question5 === "Inidividual Users") {
+    if (question5 === "Individual Users") {
       react ++;
-    }
-    else if (question5 === "Businesses") {
+    } else if (question5 === "Businesses") {
       cSharp ++;
-    }
-    else {
+    } else {
       ruby ++;
     }
     console.log(ruby, react, cSharp);
 // q6
-    if (question6 === "Microsoft") {
+    if (question6 === "Miscrosoft") {
       cSharp ++;
-    }
-    else if (question6 === "Netflix") {
+    } else if (question6 === "Netflix") {
       react ++;
-    }
-    else if (question6 === "Airbnb") {
+    } else if (question6 === "Airbnb") {
       ruby ++;
-    }
-    else if (question6 === "Dropbox") {
+    } else if (question6 === "Dropbox") {
       react ++;
-    }
-    else if (question6 === "Blizzard") {
+    } else if (question6 === "Blizzard") {
       cSharp ++;
-    }
-    else if (question6 === "Soundcloud") {
+    } else if (question6 === "Soundcloud") {
       ruby ++;
-    }
-    else if (question6 === "Instagram") {
+    } else if (question6 === "Instagram") {
       react ++;
-    }
-    else {
+    } else {
       ruby ++;
     }
-
+    console.log("ruby", "react", "cSharp");
     console.log(ruby, react, cSharp);
 //result return
     if (ruby === react || cSharp === react || ruby === cSharp) { //tiebreaker
@@ -117,7 +103,7 @@ $(document).ready(function() {
       $("#winner-button").html("React");
       $(".winner-block").show();
     } else { //cSharp wins
-      $("#winner-pic").attr("src", "img/c#.jpg");
+      $("#winner-pic").attr("src", "img/csharp.jpg");
       $("#winner-link").attr("href", "https://docs.microsoft.com/en-us/dotnet/csharp/")
       $("#winner-name").html("C#");
       $("#winner-button").html("C#");

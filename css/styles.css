@@ -19,6 +19,7 @@
 
 .winner-block {
   display: none;
+  width: 75%;
 }
 
 label {
