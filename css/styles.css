@@ -47,9 +47,10 @@ body {
   border: #E3DACD;
 }
 
-.btn:focus {
-  /* outline: none; */
-  box-shadow: none;
+.btn:active {
+  background-color: #F7715D !important;
+  color: #594A46 !important;
+  border: #FCC37C !important;
 }
 
 .form-control {
