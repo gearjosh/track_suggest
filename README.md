@@ -6,7 +6,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }This site was created to ask you a series of questions and recommend a programming language for you.  It uses Javascript branching to add value to variables and determine which code language has the highest score._
+_This site was created to ask you a series of questions and recommend a programming language for you.  It uses Javascript branching to add value to variables and determine which code language has the highest score._
 
 ## Setup/Installation Requirements
 

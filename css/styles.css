@@ -1,7 +1,6 @@
 .form-group {
   height: 170px;
-  /* display: flex; */
-  /* align-items: flex-start; */
+
 }
 
 .btn-block {
@@ -10,7 +9,6 @@
 
 .notice-me {
   font-weight: bolder;
-  /* text-shadow: .1em .1em .1em #000; */
   color: #FCC37C;
 }
 
